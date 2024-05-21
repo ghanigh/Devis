@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devis et Facture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenue sur l'application Devis et Facture</h1>
+    <button id="devisButton">Créer un devis</button>
+    <button id="factureButton">Créer une facture</button>
+  </div>
+
+  <div id="devisForm" class="hidden">
+    <h2>Créer un devis</h2>
+    <div class="info-container">
+      <div class="client-info">
+        <h3>Informations du client :</h3>
+        <div class="form-group">
+          <label for="nomInput">Nom :</label>
+          <input type="text" id="nomInput" placeholder="Nom du client">
+        </div>
+        <div class="form-group">
+          <label for="prenomInput">Prénom :</label>
+          <input type="text" id="prenomInput" placeholder="Prénom du client">
+        </div>
+        <div class="form-group">
+          <label for="telInput">Numéro de téléphone :</label>
+          <input type="tel" id="telInput" placeholder="Numéro de téléphone du client">
+        </div>
+        <div class="form-group">
+          <label for="emailInput">Adresse e-mail :</label>
+          <input type="email" id="emailInput" placeholder="Adresse e-mail du client">
+        </div>
+        <div class="form-group">
+          <label for="adresseInput">Adresse postale :</label>
+          <input type="text" id="adresseInput" placeholder="Adresse postale du client">
+        </div>
+        <div class="form-group">
+          <label for="codePostalInput">Code postal :</label>
+          <input type="text" id="codePostalInput" placeholder="Code postal du client">
+        </div>
+        <div class="form-group">
+          <label for="typeClientSelect">Type de client :</label>
+          <select id="typeClientSelect">
+            <option value="particulier">Particulier</option>
+            <option value="professionnel">Professionnel</option>
+          </select>
+        </div>
+      </div>
+      <div class="company-info">
+        <h3>Informations de la société :</h3>
+        <p>Thierry et ses compagnons</p>
+      </div>
+    </div>
+    <label for="tvaSelect">Taux de TVA :</label>
+    <select id="tvaSelect">
+      <option value="0">Sans TVA</option>
+      <option value="10">TVA à 10%</option>
+      <option value="20">TVA à 20%</option>
+    </select>
+    <div class="table-container">
+      <h3>Tableau de devis :</h3>
+      <table id="devisTable">
+        <thead>
+          <tr>
+            <th>Désignation</th>
+            <th>Quantité</th>
+            <th>Prix HT (€)</th>
+            <th>TVA (%)</th>
+            <th>Montant TVA (€)</th>
+            <th>Total TTC (€)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Les lignes du tableau seront générées dynamiquement en JavaScript -->
+        </tbody>
+      </table>
+      <button id="addDevisItemButton">Ajouter un article</button>
+    </div>
+    <div id="signaturePad" class="hidden">
+      <h3>Signature du client :</h3>
+      <canvas id="signatureCanvas" width="400" height="200"></canvas>
+      <button id="clearSignatureButton">Effacer la signature</button>
+    </div>
+    <button id="sendDevisButton">Envoyer le devis</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

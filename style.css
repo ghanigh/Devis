@@ -1,0 +1,103 @@
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Blanc cassé */
+  color: #333; /* Noir */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff; /* Blanc */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+/* Titre */
+h1, h2, h3 {
+  color: #333; /* Noir */
+}
+
+/* Boutons */
+button {
+  background-color: #007bff; /* Bleu */
+  color: #fff; /* Blanc */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Bleu foncé */
+}
+
+/* Formulaires */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc; /* Gris clair */
+  border-radius: 5px;
+}
+
+/* Tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd; /* Gris plus clair */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff; /* Bleu */
+  color: #fff; /* Blanc */
+}
+
+/* Sections */
+.info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.client-info, .company-info {
+  width: 48%;
+}
+
+/* Signature */
+#signaturePad {
+  margin-top: 20px;
+}
+
+#signatureCanvas {
+  border: 1px solid #ccc; /* Gris clair */
+  border-radius: 5px;
+}
+
+/* Ajout d'articles */
+#addDevisItemButton {
+  margin-top: 20px;
+}
+
+/* Clear Signature Button */
+#clearSignatureButton {
+  background-color: #dc3545; /* Rouge */
+  color: #fff; /* Blanc */
+}
+
+#clearSignatureButton:hover {
+  background-color: #bd2130; /* Rouge foncé */
+}
