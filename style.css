@@ -15,6 +15,7 @@ body {
   background-color: #fff; /* Blanc */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+  text-align: center; /* Centre le texte à l'intérieur */
 }
 
 /* Titre */
@@ -31,6 +32,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 10px; /* Ajoute un espace autour des boutons */
 }
 
 button:hover {
@@ -71,10 +73,20 @@ th {
 .info-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Permet l'ajustement sur petits écrans */
 }
 
 .client-info, .company-info {
   width: 48%;
+  margin-bottom: 20px; /* Ajoute un espace en bas pour les petits écrans */
+}
+
+.client-info {
+  flex: 1 1 100%;
+}
+
+.company-info {
+  flex: 1 1 100%;
 }
 
 /* Signature */
@@ -85,6 +97,7 @@ th {
 #signatureCanvas {
   border: 1px solid #ccc; /* Gris clair */
   border-radius: 5px;
+  width: 100%; /* S'assure que le canvas prend toute la largeur disponible */
 }
 
 /* Ajout d'articles */
@@ -100,4 +113,20 @@ th {
 
 #clearSignatureButton:hover {
   background-color: #bd2130; /* Rouge foncé */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column; /* Colonne sur petits écrans */
+  }
+
+  .client-info, .company-info {
+    width: 100%; /* 100% de la largeur sur petits écrans */
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
